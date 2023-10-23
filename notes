@@ -1,0 +1,16 @@
+Normal
+	highlightColor: 0xffc300, // 0xaaffff
+	midtoneColor: 0xff1f00, // 0x00002a
+	lowlightColor: 0x2d00ff, // 0xaaaa7e
+	baseColor: 0xffebeb, // 0x1a9eaa
+bad weather
+	highlightColor: 0x151516 , // 0xaaffff
+	midtoneColor: 0x406872, // 0x00002a
+	lowlightColor: 0xececed, // 0xaaaa7e
+	baseColor: 0xffebeb, // 0x1a9eaa
+
+blue sky
+	highlightColor: 0xa4ff, // 0xaaffff
+	midtoneColor: 0xe1ff, // 0x00002a
+	lowlightColor: 0xececed, // 0xaaaa7e
+	baseColor: 0xffebeb, // 0x1a9eaa
