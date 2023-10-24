@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Cookies from "js-cookie";
 import { useMessage } from "@/contexts/MessageContext";
 import {motion} from 'framer-motion'
-import Logo from '@/components/Logo'
+import Logo from '@/Components/Logo'
 
 const securityQuestions = [
   {

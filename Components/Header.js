@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import { ImExit } from 'react-icons/im';
 import { useRouter } from 'next/router';
-import Logo from '@/components/Logo'
+import Logo from '@/Components/Logo'
 import DropdownMenu from './DropdownMenu';
 
 const Header = () => {

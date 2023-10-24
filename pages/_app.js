@@ -3,7 +3,7 @@ import Header from '@/Components/Header'
 import Footer from '@/Components/Footer'
 import { MessageProvider } from "@/contexts/MessageContext";
 // import Rings from '@/components/Rings/VantaRings'
-import Fog from '@/components/Fog/VantaFog'
+import Fog from '@/Components/Fog/VantaFog'
 import { useRef, useEffect, useState } from "react";
 export default function App({ Component, pageProps }) {
   const [vantaEffect, setVantaEffect] = useState(null)
