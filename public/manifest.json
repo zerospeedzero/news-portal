@@ -1,7 +1,7 @@
 {
     "theme_color": "#0F0F0F",
     "background_color": "#F4F4F1",
-    "display": "browser",
+    "display": "standalone",
     "display_override": ["tabbed"],
     "scope": "/",
     "start_url": "/",

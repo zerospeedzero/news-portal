@@ -3,10 +3,24 @@ import Link from 'next/link'
 import {motion} from 'framer-motion'
 import Image from 'next/image'
 
-const Article = ({article, showURL, vantaEffect}) => {
+const Article = ({key, article, showURL, vantaEffect}) => {
   const removeATags = (description) => {
     return description.replace(/<a\b[^>]*>.*?<\/a>/g, '');
-  }  
+  }
+  const articleVariants = {
+    offscreen: {
+      y: 300
+    },
+    onscreen: {
+      y: 50,
+      rotate: -10,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8
+      }
+    }
+  };  
   return (
     <> 
       {article.urlToImage && (
@@ -15,6 +29,9 @@ const Article = ({article, showURL, vantaEffect}) => {
             className='relative flex flex-col justify-start h-full bg-s1 text-p2 rounded-xl shadow-lg cursor-pointer'
             whileHover={{scale: 1.05, color: '#000000', backgroundColor: '#DCE8EA', shadow: '0px 0px 20px 0px rgba(0,0,0,0.75)'}}
             // onClick={()=>showURL(article.url)}
+            initial={{scale: 0.8}}
+            whileInView={{scale: 1}}
+            transition={{type: 'spring', bounce: 0.4, duration: 0.8}}
           >
             <Image
               className='rounded-t-xl'

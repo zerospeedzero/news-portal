@@ -10,7 +10,7 @@ const Grid = ({heading, articles, showURL, vantaEffect}) => {
         <h2 className='text-3xl font-semibold text-blue-900  p-4 text-center opacity-90 capitalize'>{heading}</h2>
       </div>
       <motion.div
-        className="mx-auto grid max-w-fit flex-1 grid-cols-1 gap-8 p-10 md:grid-cols-2 md:pt-10 lg:grid-cols-3 xl:grid-cols-4 sxl:grid-cols-5"
+        className="mx-auto grid max-w-fit flex-1 grid-cols-1 gap-8 p-8 md:grid-cols-2 md:pt-10 lg:grid-cols-3 xl:grid-cols-4 sxl:grid-cols-5"
       >
         { articles && articles.length == 0 && (<p>No news is not good news for this website!!</p>)}
         { articles && articles.map((article, index) => (
