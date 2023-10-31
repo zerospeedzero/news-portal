@@ -164,13 +164,14 @@ const Login = ({vantaEffect}) => {
                   {currentQuestion.answers.map((answer, index) => (
                     <motion.button
                       key={index}
-                      className={`w-full p-2 bg-white text-md text-gray-700 border-gray-300 rounded  hover:bg-orange-500 hover:text-white shadow-lg`}
+                      className={`w-full p-2 bg-white text-md text-gray-700 border-gray-300 rounded  hover:bg-orange-500 hover:text-white  shadow-lg`}
                       onClick={(e) => {handleAnswer(answer,e);}}
                       onMouseOver={(e) => {changeSpeed('13'); e.target.style.backgroundColor=btnColor}}
                       onMouseLeave={(e) => {changeSpeed('2'); e.target.style.backgroundColor='white'}}
                       // initial={{opacity: 0}}
                       // initial={{x: -30}}
                       // animate={{x: 0}}
+                      whileHover={{scale: 1.1}}
                       whileInView={{x: [0, -25, 25, 0], y: [0, -25, 25, 0], opacity: [0, 0.25, 0.75, 1]}}
                       transition={{delay: 3.5 + (index/20), duration: 1.3, loop: Infinity}}
                       >

@@ -28,6 +28,13 @@ const Header = () => {
               </motion.h1>
             </Link>
             <DropdownMenu/>
+            {/* <button> */}
+              <motion.h1 className='text-md font-semibold cursor-pointer ml-4 hover:text-orange-400 hover:scale-110'
+                onClick={()=>{router.push('/startsearch')}}
+              >
+                Search
+              </motion.h1>
+            {/* </button> */}
           </div>
           <ImExit className='text-3xl m-2 cursor-pointer' onClick={()=>{Cookies.set(LOGIN_COOKIE_KEY,false);router.push('/');router.reload()}}/>
         </motion.div>      

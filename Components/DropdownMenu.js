@@ -15,7 +15,7 @@ const DropdownMenu = () => {
         <button
           onClick={toggleMenu}
           type="button"
-          className="text-white focus:outline-none font-semibold"
+          className="text-white focus:outline-none font-semibold hover:text-orange-400"
         >
           Categories
         </button>
@@ -26,10 +26,11 @@ const DropdownMenu = () => {
           initial={{opacity: 0}}
           animate={{opacity: 1}}
           transition={{duration: 0.8}}
+          onMouseLeave={() => setIsOpen(false)}
         >
           <div className="py-2">
             {menu.map((item, index) => (
-              <Link href={`/categories/${item.toLowerCase()}`} key={index} className="block px-4 py-2 text-sm  text-white  hover:bg-gray-100 hover:text-blue-600 "
+              <Link href={`/categories/${item.toLowerCase()}`} key={index} className="block px-4 py-2 text-sm  text-white  hover:bg-gray-100 hover:text-orange-400 "
                 onClick={() => setIsOpen(false)}
               >
                 <motion.span

@@ -31,7 +31,7 @@ const withPWA = require("next-pwa")({
 module.exports = withPWA({
   reactStrictMode: true,
   images: {
-    domains: ['www.si.com', 's.yimg.com'],
+    domains: ['www.si.com', 's.yimg.com', 'www.thestreet.com'],
     remotePatterns: [
       {
         protocol: 'https',

@@ -19,7 +19,7 @@ function Home({vantaEffect}) {
       const news = await res.json()
       setTimeout(() => {
         setNews(news)
-      }, 300)
+      }, 100)
     } catch (error) {
       console.log("Can get the news!")
       setNews([])

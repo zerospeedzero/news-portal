@@ -4,6 +4,9 @@ import {motion} from 'framer-motion'
 import Image from 'next/image'
 
 const Article = ({article, showURL, vantaEffect}) => {
+  const removeATags = (description) => {
+    return description.replace(/<a\b[^>]*>.*?<\/a>/g, '');
+  }  
   return (
     <> 
       {article.urlToImage && (
@@ -27,8 +30,9 @@ const Article = ({article, showURL, vantaEffect}) => {
               {article.title}
             </motion.h3>
             <motion.p
-              className='text-base p-4'
+              className='text-base p-4 break-words'
               >
+              {/* {removeATags(article.description)} */}
               {article.description}
             </motion.p>
             <div className='h-8'></div>
