@@ -31,6 +31,7 @@ const withPWA = require("next-pwa")({
 module.exports = withPWA({
   reactStrictMode: true,
   images: {
+    unoptimized: true,
     domains: ['www.si.com', 's.yimg.com', 'www.thestreet.com'],
     remotePatterns: [
       {
