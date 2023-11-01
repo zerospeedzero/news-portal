@@ -15,7 +15,8 @@ function Home({vantaEffect}) {
   }
   const getNews = async () => {
     try {
-      const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`)
+      // const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`)
+      const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=35af660db1a04e5a9bb061744398e4fd`)
       const news = await res.json()
       setTimeout(() => {
         setNews(news)

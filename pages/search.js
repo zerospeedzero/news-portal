@@ -62,7 +62,7 @@ function Search({vantaEffect}) {
                 <div className='w-fit bg-blue-500/20 p-4 m-4 rounded-lg shadow-lg'>
                   <h3 className="text-3xl font-semibold text-blue-900 text-start m-4">Searching by keyword(s)</h3>
                   <div className='flex flex-row justify-center items-center'>
-                    <input className="h-[3rem] w-full text-lg text-black m-4 p-2 rounded-md shadow-md" type="text" placeholder="Search.." name="search" value={inputText} onChange={e => {setInputText(e.target.value)}} onKeyPress={handleKeyPress} />
+                    <input autocomplete="one-time-code" className="h-[3rem] w-full text-lg text-black m-4 p-2 rounded-md shadow-md" type="text" placeholder="Search.." name="search" value={inputText} onChange={e => {setInputText(e.target.value)}} onKeyPress={handleKeyPress} />
                     <motion.button className=' bg-orange-400 text-white p-3 m-4 ml-1 rounded-md shadow-md'
                       onClick={()=>{getSearchResults()}}
                       initial={{x:'-8rem', y:'-2rem', scale:6, opacity: 1}}

@@ -11,9 +11,12 @@ const DropdownMenu = () => {
 
   return (
     <div className="relative inline-block text-left">
-      <div>
+      <div
+      >
         <button
           onClick={toggleMenu}
+          // onMouseEnter={() => setIsOpen(true)}
+          // onMouseLeave={() => setIsOpen(false)}
           type="button"
           className="text-white focus:outline-none font-semibold hover:text-orange-400"
         >
