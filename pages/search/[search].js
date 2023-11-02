@@ -15,7 +15,6 @@ export const getServerSideProps = async (context) => {
     }
   } catch (error) {
     console.log("Can not get the news!")
-    console.log(error)
     return {
       props: {
         news: []
