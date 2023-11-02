@@ -32,7 +32,8 @@ export const getStaticProps = async ({params}) => {
 
 function Category({vantaEffect, news}) {
   const LOGIN_COOKIE_KEY = "login_attempts";
-  const router = useRouter(); 
+  const router = useRouter();
+  const category = router.query.category || 'none'
  
   useEffect(() => {
     if (Cookies.get(LOGIN_COOKIE_KEY) !== "true") {
@@ -41,7 +42,7 @@ function Category({vantaEffect, news}) {
   }, []);
   return (
     <>
-      <List news={news} />
+      <List news={news} heading={category} />
     </>
   )
 }

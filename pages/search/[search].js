@@ -24,7 +24,8 @@ export const getServerSideProps = async (context) => {
 }
 function Search({vantaEffect, news}) {
   const LOGIN_COOKIE_KEY = "login_attempts";
-  const router = useRouter(); 
+  const router = useRouter();
+  const search = router.query.search || 'none'
  
   useEffect(() => {
     if (Cookies.get(LOGIN_COOKIE_KEY) !== "true") {
@@ -33,7 +34,7 @@ function Search({vantaEffect, news}) {
   }, []);  
   return (
     <>
-      <List news={news}/>
+      <List news={news} heading={"Search: " + search}/>
     </>
   )
 }

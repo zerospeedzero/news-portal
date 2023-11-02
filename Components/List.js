@@ -5,7 +5,7 @@ import Official from '@/Components/Official'
 import { useRouter } from "next/router";
 import Cookies from 'js-cookie';
 
-function Home({vantaEffect, news}) {
+function Home({vantaEffect, news, heading}) {
   const LOGIN_COOKIE_KEY = "login_attempts";
   const router = useRouter();
   const [isLoading, setIsLoading] = React.useState(true)
@@ -26,7 +26,7 @@ function Home({vantaEffect, news}) {
       <div className='h-16'></div>
       {showOfficial && (<Official url={showOfficial} showURL={showURL} />)}
       {!isLoading ? (
-        <NewsGrid heading="Headlines" articles={news.articles} showURL={showURL} vantaEffect={vantaEffect}/>
+        <NewsGrid heading={heading} articles={news.articles} showURL={showURL} vantaEffect={vantaEffect}/>
       ) : (
         <div>
           <Spinner message='Loading News...'/>

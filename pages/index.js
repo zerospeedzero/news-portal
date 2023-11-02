@@ -19,7 +19,7 @@ export const getServerSideProps = async () => {
 const index = ({news}) => {
   return (
     <>
-      <List news={news} />
+      <List news={news} heading='Headlines' />
     </>
   )
 }
