@@ -29,8 +29,8 @@ const Article = ({key, article, showURL, vantaEffect}) => {
             className='relative flex flex-col justify-start h-full bg-s1 text-p2 rounded-xl shadow-lg cursor-pointer'
             whileHover={{scale: 1.05, color: '#000000', backgroundColor: '#DCE8EA', shadow: '0px 0px 20px 0px rgba(0,0,0,0.75)'}}
             // onClick={()=>showURL(article.url)}
-            initial={{scale: 0.8, opacity:0.5 }}
-            whileInView={{scale: 1, opacity: 1}}
+            initial={{scale: 0.8, opacity:0.5, y:  }}
+            whileInView={{scale: 1, opacity: 1, y:0}}
             transition={{type: 'spring', bounce: 0.4, duration: 0.8}}
           >
             <Image
