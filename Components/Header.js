@@ -30,7 +30,7 @@ const Header = () => {
             <DropdownMenu/>
             {/* <button> */}
               <motion.h1 className='text-md font-semibold cursor-pointer ml-4 hover:text-orange-400 hover:scale-110'
-                onClick={()=>{router.push('/startsearch')}}
+                onClick={()=>{router.push('/search')}}
               >
                 Search
               </motion.h1>
