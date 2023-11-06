@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const menu = ['Business', 'Technology', 'Science', 'Sports', 'Health', 'General', 'Entertainment'
+  const menu = ['Business', 'Technology', 'Science', 'Sports', 'Health', 'Entertainment'
 ]
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -32,6 +32,19 @@ const DropdownMenu = () => {
           onMouseLeave={() => setIsOpen(false)}
         >
           <div className="py-2">
+            <Link
+              href="/"
+            >
+              <motion.span
+                className="block px-8 py-3 my-1 text-md font-semibold border-gray-400 hover:bg-gray-100 hover:text-orange-400"
+                initial={{x: 39}}
+                animate={{x: 0}}
+                transition={{delay: 0.2, duration: 0.8, loop: Infinity}}
+                onClick={() => setIsOpen(false)}
+              >
+                Headlines
+              </motion.span>
+            </Link>            
             {menu.map((item, index) => (
               <Link href={`/categories/${item.toLowerCase()}`} key={index} className="block px-4 py-2 text-sm  text-white  hover:bg-gray-100 hover:text-orange-400 "
                 onClick={() => setIsOpen(false)}
@@ -47,6 +60,19 @@ const DropdownMenu = () => {
               </Link>
               )
             )}
+            {/* <Link
+              href="/"
+            >
+              <motion.span
+                className="block px-8 py-3 my-1 text-md font-semibold border-gray-400 hover:bg-gray-100 hover:text-orange-400"
+                initial={{x: 40 + menu.length}}
+                animate={{x: 0}}
+                transition={{delay: 0.2 + (menu.length/20), duration: 0.8, loop: Infinity}}
+                onClick={() => setIsOpen(false)}
+              >
+                Headlines
+              </motion.span>
+            </Link> */}
           </div>
         </motion.div>
       )}
