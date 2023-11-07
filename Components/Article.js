@@ -67,6 +67,8 @@ const Article = ({key, article, showURL, vantaEffect}) => {
             <motion.div className='h-16'></motion.div>
             <motion.div
               className='absolute left-4 bottom-2 cursor-pointer'
+              whileHover={{scale: 1.2}}
+              trnsition={{type: 'spring', bounce: 0.4, duration: 0.8}}
             >
               <WhatsappShareButton
                 url={article.url}
