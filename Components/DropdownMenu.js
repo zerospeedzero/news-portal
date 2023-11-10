@@ -36,7 +36,7 @@ const DropdownMenu = () => {
               href="/"
             >
               <motion.span
-                className="block px-8 py-3 my-1 text-md font-semibold border-gray-400 hover:bg-gray-100 hover:text-orange-400"
+                className="block px-8 py-2 mb-2 text-md font-semibold border-gray-400 hover:bg-gray-100 hover:text-orange-400"
                 initial={{x: 39}}
                 animate={{x: 0}}
                 transition={{delay: 0.2, duration: 0.8, loop: Infinity}}
@@ -44,7 +44,8 @@ const DropdownMenu = () => {
               >
                 Headlines
               </motion.span>
-            </Link>            
+            </Link>
+            <div className='border-b-2 opacity-25 '></div>
             {menu.map((item, index) => (
               <Link href={`/categories/${item.toLowerCase()}`} key={index} className="block px-4 py-2 text-sm  text-white  hover:bg-gray-100 hover:text-orange-400 "
                 onClick={() => setIsOpen(false)}
@@ -60,19 +61,21 @@ const DropdownMenu = () => {
               </Link>
               )
             )}
-            {/* <Link
-              href="/"
+             <div className='border-b-2 opacity-25 '></div>
+            <Link
+              href="/sources"
             >
               <motion.span
-                className="block px-8 py-3 my-1 text-md font-semibold border-gray-400 hover:bg-gray-100 hover:text-orange-400"
-                initial={{x: 40 + menu.length}}
+                className="block px-8 py-2 mt-2 text-md font-semibold border-gray-400 hover:bg-gray-100 hover:text-orange-400"
+                initial={{x: 46}}
                 animate={{x: 0}}
-                transition={{delay: 0.2 + (menu.length/20), duration: 0.8, loop: Infinity}}
+                transition={{delay: 0.5, duration: 0.8, loop: Infinity}}
                 onClick={() => setIsOpen(false)}
               >
-                Headlines
+                Sources
               </motion.span>
-            </Link> */}
+            </Link>            
+
           </div>
         </motion.div>
       )}

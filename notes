@@ -18,3 +18,9 @@ blue sky
 
 	35af660db1a04e5a9bb061744398e4fd
 	ec54e5a453d346378cbcc5d0ee486705
+
+
+	ssh -L 4000:localhost:3000 root@
+
+	http://165.192.110.182:3000/
+	

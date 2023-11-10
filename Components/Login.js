@@ -37,7 +37,7 @@ const Login = ({vantaEffect}) => {
   const [failAttempts, setFailAttempts] = useState([0,0,0]); 
   const currentQuestion = securityQuestions[step - 1];
   const showMessage = useMessage();
-  const [btnColor, setBtnColor] = useState('orange')
+  const [btnColor, setBtnColor] = useState('dodgerblue')
   // const changeHoverColor = (color) => {
   //   const buttons = document.getElementsByTagName('button');
   //   for (let i = 0; i < buttons.length; i++) {
