@@ -3,7 +3,6 @@ import {motion} from 'framer-motion'
 import Article from './Article'
 
 const Grid = ({heading, articles, showURL, vantaEffect}) => {
-  // console.log(articles)
   return (
     <>
       <div className='flex flex-row justify-center items-center'>

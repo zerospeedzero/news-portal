@@ -23,7 +23,7 @@ function Home({vantaEffect, news, heading}) {
   }, []);
   return (
     <>
-      <div className='h-16'></div>
+      <div className='h-20'></div>
       {showOfficial && (<Official url={showOfficial} showURL={showURL} />)}
       {!isLoading ? (
         <NewsGrid heading={heading} articles={news.articles} showURL={showURL} vantaEffect={vantaEffect}/>

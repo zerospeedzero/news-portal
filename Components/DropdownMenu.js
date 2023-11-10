@@ -15,12 +15,10 @@ const DropdownMenu = () => {
       >
         <button
           onClick={toggleMenu}
-          // onMouseEnter={() => setIsOpen(true)}
-          // onMouseLeave={() => setIsOpen(false)}
           type="button"
-          className="text-white focus:outline-none font-semibold hover:text-orange-400"
+          className="text-white text-xl focus:outline-none font-semibold hover:text-orange-400"
         >
-          Categories
+          Topics
         </button>
       </div>
       {isOpen && (
@@ -72,7 +70,7 @@ const DropdownMenu = () => {
                 transition={{delay: 0.5, duration: 0.8, loop: Infinity}}
                 onClick={() => setIsOpen(false)}
               >
-                Sources
+                Publishers  
               </motion.span>
             </Link>            
 
