@@ -54,7 +54,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <div ref={myRef} className="fixed w-full h-[100vh] -z-5" onClick={()=>changeSpeed()}></div>
-      <Header/>
+      <Header ref={myRef}/>
       <MessageProvider>
         <Component {...pageProps} vantaEffect={vantaEffect}/>
       </MessageProvider>

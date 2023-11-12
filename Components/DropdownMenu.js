@@ -13,13 +13,15 @@ const DropdownMenu = () => {
     <div className="relative inline-block text-left">
       <div
       >
-        <button
+        <motion.button
           onClick={toggleMenu}
           type="button"
           className="text-white text-xl focus:outline-none font-semibold hover:text-orange-400"
+          whileHover={{scale: 1.1}}
+          transition={{type: 'spring', bounce: 0.4, duration: 0.8}}
         >
           Topics
-        </button>
+        </motion.button>
       </div>
       {isOpen && (
         <motion.div 

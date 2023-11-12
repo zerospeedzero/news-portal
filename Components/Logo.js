@@ -25,7 +25,7 @@ const Logo = ({input}) => {
           animate="visible"
           >
           <motion.ellipse
-            className="stroke-[5px] fill-transparent"
+            className="stroke-[6px] fill-transparent"
             cx="75"
             cy="75"
             rx="20"
@@ -35,7 +35,7 @@ const Logo = ({input}) => {
             custom={1}
           />
           <motion.ellipse
-            className="stroke-[5px] fill-transparent"
+            className="stroke-[6px] fill-transparent"
             cx="75"
             cy="75"
             rx="60"
@@ -45,7 +45,7 @@ const Logo = ({input}) => {
             custom={2}
           />
           <motion.ellipse
-            className="stroke-[5px] fill-transparent"
+            className="stroke-[6px] fill-transparent"
             cx="75"
             cy="75"
             rx="42"

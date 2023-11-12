@@ -23,4 +23,3 @@ blue sky
 	ssh -L 4000:localhost:3000 root@
 
 	http://165.192.110.182:3000/
-	

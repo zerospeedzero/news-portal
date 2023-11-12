@@ -25,7 +25,10 @@ const Header = ({ref}) => {
               >
                 News Portal
               </motion.h1> */}
-              <img className="pr-10" src="/logo1.png" width={100} height={100}/>
+              <motion.img className="pr-10" src="/logo1.png" width={100} height={100}
+                whileHover={{scale: 1.1}}
+                transition={{type: 'spring', bounce: 0.4, duration: 0.8}}
+              />
             </Link>
             <DropdownMenu/>
             <motion.h1 className='text-xl font-semibold cursor-pointer ml-9 hover:text-orange-400 hover:scale-110'
@@ -34,7 +37,13 @@ const Header = ({ref}) => {
               Search
             </motion.h1>
           </div>
-          <ImExit className='text-3xl m-2 cursor-pointer' onClick={()=>{Cookies.set(LOGIN_COOKIE_KEY,false);router.push('/');router.reload()}}/>
+          <motion.div
+            className='w-fit'
+            whileHover={{scale: 1.2}}
+            transition={{type: 'spring', bounce: 0.4, duration: 0.8}}
+          >
+            <ImExit className='text-3xl m-2 cursor-pointer' onClick={()=>{Cookies.set(LOGIN_COOKIE_KEY,false);router.push('/');router.reload()}}/>
+          </motion.div>
         </motion.div>      
       ):<></>}  
     </>

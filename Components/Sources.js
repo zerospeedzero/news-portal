@@ -1,9 +1,22 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useRouter } from "next/router";
+import Cookies from 'js-cookie';
+import { useEffect } from 'react';
 
 const Sources = ({sources}) => {
-  console.log(sources.sources)
+  const LOGIN_COOKIE_KEY = "login_attempts";
+  const [isLoading, setIsLoading] = React.useState(true)
+  const router = useRouter();
+  useEffect(() => {
+    if (Cookies.get(LOGIN_COOKIE_KEY) !== "true") {
+      router.push("/login"); 
+    }
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 300) 
+  }, []);  
   return (
     <motion.div
       className='w-full h-full flex flex-col justify-start items-center opacity-95'
