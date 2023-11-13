@@ -36,7 +36,7 @@ const DropdownMenu = () => {
               href="/"
             >
               <motion.span
-                className="block px-8 py-2 mb-2 text-md font-semibold border-gray-400 hover:bg-gray-100 hover:text-orange-400"
+                className="block px-8 py-2 mb-2 text-sm font-semibold border-gray-400 hover:bg-gray-100 hover:text-orange-400"
                 initial={{x: 39}}
                 animate={{x: 0}}
                 transition={{delay: 0.2, duration: 0.8, loop: Infinity}}
@@ -51,7 +51,7 @@ const DropdownMenu = () => {
                 onClick={() => setIsOpen(false)}
               >
                 <motion.span
-                  className="block px-4 py-2 text-md font-semibold "
+                  className="block px-4 py-2 text-sm font-semibold "
                   initial={{x: 40 + index}}
                   animate={{x: 0}}
                   transition={{delay: 0.2 + (index/20), duration: 0.8, loop: Infinity}}
@@ -66,7 +66,7 @@ const DropdownMenu = () => {
               href="/sources"
             >
               <motion.span
-                className="block px-8 py-2 mt-2 text-md font-semibold border-gray-400 hover:bg-gray-100 hover:text-orange-400"
+                className="block px-8 py-2 mt-2 text-sm font-semibold border-gray-400 hover:bg-gray-100 hover:text-orange-400"
                 initial={{x: 46}}
                 animate={{x: 0}}
                 transition={{delay: 0.5, duration: 0.8, loop: Infinity}}
