@@ -11,25 +11,24 @@ const DropdownMenu = () => {
 
   return (
     <div className="relative inline-block text-left">
-      <div
+      <motion.button
+        onMouseOver={()=>setIsOpen(true)}
+        onMouseLeave={()=>setIsOpen(false)}
+        type="button"
+        className="text-white text-xl py-6 focus:outline-none font-semibold hover:text-orange-400"
+        whileHover={{scale: 1.1}}
+        transition={{type: 'spring', bounce: 0.4, duration: 0.8}}
       >
-        <motion.button
-          onClick={toggleMenu}
-          type="button"
-          className="text-white text-xl focus:outline-none font-semibold hover:text-orange-400"
-          whileHover={{scale: 1.1}}
-          transition={{type: 'spring', bounce: 0.4, duration: 0.8}}
-        >
-          Topics
-        </motion.button>
-      </div>
+        Topics
+      </motion.button>
       {isOpen && (
         <motion.div 
-          className="origin-top-right absolute left-0 mt-5 w-40 rounded-b-lg shadow-lg bg-gradient-to-tr from-blue-900 to-cyan-600  ring-1 ring-black ring-opacity-5"
+          className="origin-top-right absolute left-0 w-40 rounded-b-lg shadow-lg bg-gradient-to-bl to-blue-900 from-cyan-600  ring-1 ring-black ring-opacity-5"
           initial={{opacity: 0}}
           animate={{opacity: 1}}
           transition={{duration: 0.8}}
-          onMouseLeave={() => setIsOpen(false)}
+          onMouseOver={()=>setIsOpen(true)}
+          onMouseLeave={()=>setIsOpen(false)}
         >
           <div className="py-2">
             <Link
