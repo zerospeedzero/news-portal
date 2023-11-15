@@ -15,7 +15,7 @@ const DropdownMenu = () => {
         onMouseOver={()=>setIsOpen(true)}
         onMouseLeave={()=>setIsOpen(false)}
         type="button"
-        className="text-white text-xl py-6 focus:outline-none font-semibold hover:text-orange-400"
+        className="text-white text-xl py-[1.6rem] focus:outline-none font-semibold hover:text-orange-400"
         whileHover={{scale: 1.1}}
         transition={{type: 'spring', bounce: 0.4, duration: 0.8}}
       >
